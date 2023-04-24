@@ -32,7 +32,7 @@ SELECT CONCAT(first_name,' ',last_name) FROM employees WHERE month(birth_date) =
 
 SELECT CONCAT(first_name,' ',last_name) FROM employees WHERE month(birth_date) = 12 AND day(birth_date) = 25 AND year(hire_date) BETWEEN 1990 AND 1999 ORDER BY birth_date ASC, hire_date DESC;
 
-SELECT CONCAT(first_name,' ',last_name, ' has been working at this company for ', DATEDIFF(CURDATE(), hire_date),' days.') AS 'List of employees born on christmas and hired in the 90s as well as their days at the company so far.' FROM employees WHERE month(birth_date) = 12 AND day(birth_date) = 25 AND year(hire_date) BETWEEN 1990 AND 1999;
+SELECT CONCAT(first_name,' ',last_name, ' has been working at this company for ', DATEDIFF(CURDATE(), hire_date),' days.') AS ' List of employees born on christmas and hired in the 90s as well as their days at the company so far. '  FROM employees WHERE month(birth_date) = 12 AND day(birth_date) = 25 AND year(hire_date) BETWEEN 1990 AND 1999;
 
 
 
